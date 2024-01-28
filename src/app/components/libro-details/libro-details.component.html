@@ -1,0 +1,92 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentLibro.id">
+    <h4>Libro</h4>
+    <div>
+      <label><strong>Title:</strong></label> {{ currentLibro.titulo }}
+    </div>
+    <div>
+      <label><strong>Description:</strong></label>
+      {{ currentLibro.sinopsis }}
+    </div>
+    <div>
+      <label><strong>Status:</strong></label>
+      {{ currentLibro.publicado ? "Published" : "Pending" }}
+    </div>
+
+    <a class="badge badge-warning"
+      routerLink="/libro-details/{{ currentLibro.id }}">
+      Edit
+    </a>
+  </div>
+
+  <div *ngIf="!currentLibro">
+    <br />
+    <p>Please click on a Libro...</p>
+  </div>
+</div>
+
+<ng-template #editable>
+  <div *ngIf="currentLibro.id" class="edit-form">
+    <h4>Libro</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentLibro.titulo"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripcion</label>
+        <input
+          type="text"
+          class="form-control"
+          id="descripcion"
+          [(ngModel)]="currentLibro.sinopsis"
+          name="descripcion"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentLibro.publicado ? "Published" : "Pending" }}
+      </div>
+    </form>
+
+    <button
+      class="badge badge-primary mr-2"
+      *ngIf="currentLibro.publicado"
+      (click)="updatePublicado(false)"
+    >
+      UnPublish
+    </button>
+    <button
+      *ngIf="!currentLibro.publicado"
+      class="badge badge-primary mr-2"
+      (click)="updatePublicado(true)"
+    >
+      Publish
+    </button>
+
+    <button class="badge badge-danger mr-2" (click)="deleteLibro()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateLibro()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentLibro.id">
+    <br />
+    <p>Cannot access this Libro...</p>
+  </div>
+</ng-template>

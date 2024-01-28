@@ -1,0 +1,205 @@
+:root {
+    --background: rgb(241, 234, 143);
+    --green: #45d8b4;
+    --dark-text: rgb(163, 243, 243);
+    --text: #000000;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, "Helvetica Neue", sans-serif;
+  }
+  
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  
+    h1 {
+      margin-bottom: 30px;
+    }
+  
+    &__container {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    hr {
+      margin: 30px 0;
+    }
+  
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .mdc-button {
+      width: 100%;
+    }
+  
+    .small-text {
+      font-size: 14px;
+      display: block;
+      text-align: center;
+  
+      &.providers {
+        margin-bottom: 30px;
+      }
+  
+      &.log-in-redirect {
+        margin-top: 30px;
+  
+        a {
+          color: var(--green);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* You can add global styles to this file, and also import other style files */
+.bg {
+	position: relative;
+}
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+.custom-shape-divider-top {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+.custom-shape-divider-bottom .shape-fill,
+.custom-shape-divider-top .shape-fill {
+    fill: #FFFFFF;
+}
+
+.card {
+	cursor: pointer;
+}
+
+.bg-normal {
+	background-color: #A8A77A;
+	color: #fff;
+}
+
+.bg-fire {
+	background-color: #EE8130;
+	color: #fff;
+}
+
+.bg-water {
+	background-color: #6390F0;
+	color: #fff;
+}
+
+.bg-electric {
+	background-color: #F7D02C;
+	color: #fff;
+}
+
+.bg-grass {
+	background-color: #7AC74C;
+	color: #fff;
+}
+
+.bg-ice {
+	background-color: #96D9D6;
+	color: #fff;
+}
+
+.bg-fighting {
+	background-color: #C22E28;
+	color: #fff;
+}
+
+.bg-poison {
+	background-color: #A33EA1;
+	color: #fff;
+}
+
+.bg-ground {
+	background-color: #E2BF65;
+	color: #fff;
+}
+
+.bg-flying {
+	background-color: #A98FF3;
+	color: #fff;
+}
+
+.bg-psychic {
+	background-color: rgb(85, 90, 249);
+	color: #fff;
+}
+
+.bg-bug {
+	background-color: #A6B91A;
+	color: #fff;
+}
+
+.bg-rock {
+	background-color: #B6A136;
+	color: #fff;
+}
+
+.bg-ghost, .bg-shadow {
+	background-color: #735797;
+	color: #fff;
+}
+
+.bg-dragon {
+	background-color: #6F35FC;
+	color: #fff;
+}
+
+.bg-dark {
+	background-color: #705746;
+	color: #fff;
+}
+
+.bg-steel {
+	background-color: #B7B7CE;
+	color: #fff;
+}
+
+.bg-fairy {
+	background-color: rgb(0, 0, 0);
+	color: #fff;
+}
+
+.bg-unknown {
+	background-color: #aaa;
+	color: #fff;
+}

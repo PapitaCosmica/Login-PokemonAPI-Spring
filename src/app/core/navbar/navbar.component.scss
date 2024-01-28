@@ -1,0 +1,30 @@
+
+/* NAV */
+.header-nav{
+  position: absolute;
+
+  right: 0;
+
+  transition: 1s;
+  order: 2;
+}
+.header-nav li:hover,
+.header-nav li:focus {
+  background: rgb(11, 63, 97);
+  transition: 0.5s;
+}
+.header-nav ul{
+  margin: 0;
+  padding: 0;
+}
+.header-nav li{
+  list-style: none;
+  display: inline-block;
+}
+.header-nav a{
+  color: rgb(241, 232, 232);
+  text-decoration: none;
+  text-transform:uppercase;
+  font-size: 12px;
+  letter-spacing: 10px;
+}
